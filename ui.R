@@ -9,7 +9,7 @@ shinyUI(pageWithSidebar(
   
   sidebarPanel(
     
-    div(p("Simulate t tests using Effect Size, Sample Size, Total Simulations and SD as input")),
+    div(p("Simulate t tests using one of the below input parameters")),
     
     div(
       
@@ -26,7 +26,12 @@ shinyUI(pageWithSidebar(
                   strong("How varied the data is? (SD)"),
                   min=1, max=5, value=1, step=1, ticks=FALSE)
       
-    )
+    ),
+    div(p("Documentation: ")),
+    div(p("Move the slide bar in order to modify the input parameters")),
+    div(p("This widget generates random numbers that will be equal to total simulations * sample size")),
+    div(p("Then generates Histogram of t statistics and p values")),
+    div(p("On the top you will see the power and proportion of rejected nulls getting changed when input parameters are changed"))
   ),
   
   mainPanel(
